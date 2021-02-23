@@ -9,3 +9,14 @@ exports.index = (req, res) => {
     })
 }
 
+exports.getStudentsById = (req, res) => {
+
+    let id = req.params.id;
+
+    let query = `SELECT * FROM tbl_mahasiswa WHERE id = ${id}`;
+    db.query(query, (err, rows, fields) => {
+        if(err) throw err;
+         res.json({error: false, result: rows});
+    })
+}
+
