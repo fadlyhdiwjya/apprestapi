@@ -8,6 +8,9 @@ module.exports = function(app){
 
     app.route('/')
         .get(controller.index);
+
+    app.route('/students/:id')
+        .get(controller.getStudentsById);
 }
 
 
