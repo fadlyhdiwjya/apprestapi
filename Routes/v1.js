@@ -11,6 +11,9 @@ module.exports = function(app){
 
     app.route('/students/:id')
         .get(controller.getStudentsById);
+
+    app.route('/students/add-students')
+        .post(controller.addStudents);
 }
 
 
