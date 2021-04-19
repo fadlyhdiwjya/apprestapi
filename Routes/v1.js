@@ -14,6 +14,12 @@ module.exports = function(app){
 
     app.route('/students/add-students')
         .post(controller.addStudents);
+
+    app.route('/students/edit/:id')
+        .put(controller.editStudents);
+
+    app.route('/students/delete/:id')
+        .delete(controller.deleteStudents);
 }
 
 
